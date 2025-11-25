@@ -1,0 +1,43 @@
+<main class="apresentacao">
+    <section class="container_imagem">
+        <img src="img/ranger_login.png" alt="Ranger - Ford">
+    </section>
+
+    <section class="container_login">
+        <div class="container_logo">
+            <img src="img/ford_logo.png" alt="Logo Ford">
+        </div>
+
+        <div class="container_forms">
+            <form class="formulario" action="">
+                <h1 class="titulo">Boas-vindas</h1>
+                <div class="div_dados">
+                    <img id="icon_user" src="img/icon_user.svg" alt="Icone de usuário">
+                    <input [(ngModel)]="nomeLogin" name="login" type="text" placeholder="Insira seu e-mail">
+                    <img id="icon_info" src="img/icon_info.svg" alt="Icone de informação">
+                </div>
+                <div class="div_dados">
+                    <img id="icon_lock" src="img/icon_lock.svg" alt="Icone de cadeado">
+                    <input [(ngModel)]="senhaLogin" name="senha" [type]="olhoFechado ? 'password' : 'text' " placeholder="Insira sua senha">
+                    <img class="icon_olho" id="olho_fechado" (click)="toggleOlhoFechado()" *ngIf="olhoFechado" src="img/olho_fechado.svg" alt="Mostrar Senha">
+                    <img class="icon_olho" id="olho_aberto" (click)="toggleOlhoFechado()" *ngIf="!olhoFechado" src="img/olho_aberto.svg" alt="Ocultar Senha">
+                </div>
+                <div class="div_dados">
+                    <img id="icon_info_2" src="img/icon_info.svg" alt="Icone de informação">
+                </div>
+
+                <div class="texto">
+                    <p> Logar automaticamente </p>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                
+                <button (click)="testarLogin()">
+                    Entrar
+                </button>
+            </form>
+        </div>
+    </section>
+</main>

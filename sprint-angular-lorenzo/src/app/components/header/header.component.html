@@ -1,0 +1,28 @@
+<header class="cabecalho">
+        <div class="icons_home">
+            <div class="container_icon_hamburguer">
+                <img (click)="toggleMenu()" id="icon_burguer" src="img/icon_menu_burguer.svg" alt="Icon menu hamburguer">
+            </div>
+            <div class="container_icon_logout">
+                <a routerLink="/login">
+                    <img id="icon_logout" src="img/icon_home_login.svg" alt="Icon logout">
+                </a>
+            </div>
+        </div>
+</header>
+    <div class="menu-overlay" (click)="toggleMenu()" *ngIf="menuAberto"></div>
+    <aside [class.menu-ativo]="menuAberto" class="container_navegacao">
+        <nav class="navegacao">
+            <a routerLink="/home">
+                <img src="img/ford_logo.png" alt="Imagem logo Ford" id="logo">
+            </a>
+            <ul class="menu">
+                <li>
+                    <a routerLink="/home" >Home</a>
+                </li>
+                <li>
+                    <a routerLink="/vehicle" >Dashboard</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>

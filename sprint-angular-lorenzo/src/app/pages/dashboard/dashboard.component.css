@@ -1,0 +1,140 @@
+main {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.titulo_principal {
+    margin-bottom: 20px;
+}
+
+#id_titulo_principal {
+    color: blue;
+    font-size: 2.3jem;
+    font-weight: bold;
+}
+
+.container_cards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    width: 300px;
+    height: 180px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px black;
+}
+
+.cabecalho_card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(169, 169, 169, 0.267);
+}
+
+.titulo_card {
+    font-size: 1.5em;
+    padding: 10px 0 10px 15px;
+}
+
+.texto {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    text-indent: 8px;
+}
+
+.texto p {
+    font-size: 1.5rem;
+    padding-left: 10px;
+    font-weight: bold;
+    color: rgb(63, 126, 243);
+}
+
+.texto span {
+    padding-left: 10px;
+    color: rgba(0, 0, 0, 0.553);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.menu select {
+    width: 80%;
+    padding: 12px;
+}
+
+.container_imagem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+
+#img_carro {
+    width: 60%;
+}
+
+.rodape {
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
+
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+.tabela th {
+    width: 100%;
+    padding: 13px;
+    color: white;
+    background-color: blue;
+    font-size: 1.09rem;
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.tabela tr {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#item_input input {
+    width: 85%;
+}
+
+.tabela_infos td {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 13px;
+}
+
+#linha_azul_rodape {
+    background-color: blue;
+    padding: 10px;
+}

@@ -1,0 +1,35 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/img/ranger_login.png');
+    background-size: 65%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.container_boas_vindas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.753);
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.509);
+}
+
+.textos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+    gap: 55px;
+}
+
+#texto_h2 {
+    color: blue;    
+}

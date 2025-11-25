@@ -1,0 +1,99 @@
+<app-header></app-header>
+
+<main>
+    <div class="titulo_principal">
+        <h1 id="id_titulo_principal">Dashboard FORD</h1>
+    </div>
+    <div class="container_cards">
+        <div class="cards">
+            <div class="cabecalho_card">
+                <h1 class="titulo_card">Veículos</h1>
+            </div>
+            <div class="menu">
+                <select [(ngModel)]="veiculoSelecionado"> 
+                    <option value="" selected disabled hidden>Selecione um carro
+                    </option>
+                    <option *ngFor="let vehicles of listaVehicles" [ngValue]="vehicles">{{ vehicles.vehicle }} </option>
+                </select>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="cabecalho_card">
+                <h1 class="titulo_card">Total de Vendas</h1>
+            </div>
+            <div class="texto">
+                <p *ngIf="veiculoSelecionado"> {{ veiculoSelecionado.volumetotal }} </p>
+                <span>Unid.</span>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="cabecalho_card">
+                <h1 class="titulo_card">Conectados</h1>
+            </div>
+            <div class="texto">
+                <p *ngIf="veiculoSelecionado"> {{ veiculoSelecionado.connected }} </p>
+                <span>Unid.</span>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="cabecalho_card">
+                <h1 class="titulo_card">Update Software</h1>
+            </div>
+            <div class="texto">
+                <p *ngIf="veiculoSelecionado"> {{ veiculoSelecionado.softwareUpdates }} </p>
+                <span>Unid.</span>
+            </div>
+        </div>
+    </div>
+
+    <section class="container_imagem">
+        <img id="img_carro" src="{{ veiculoSelecionado?.img }}" alt="">
+    </section>
+
+    <footer class="rodape">
+        <table class="tabela">
+            <tr>
+                <th>
+                    Código - Vin
+                </th>
+                <th>
+                    Odômetro
+                </th>
+                <th>
+                    Nível de Combustível
+                </th>
+                <th>
+                    Status
+                </th>
+                <th>
+                    Lat.
+                </th>
+                <th>
+                    Long.
+                </th>
+            </tr>
+            <tr class="tabela_infos">
+                <td id="item_input">
+                    <input [(ngModel)]="vinDigitado" (ngModelChange)="returnVehiclesData()">
+                </td>
+                <td>
+                    <p *ngIf="dadosDoVeiculo"> {{ dadosDoVeiculo.odometro }} KM </p>
+                </td>
+                <td>
+                    <p *ngIf="dadosDoVeiculo"> {{ dadosDoVeiculo.nivelCombustivel }}</p>
+                </td>
+                <td>
+                    <p *ngIf="dadosDoVeiculo"> "{{ dadosDoVeiculo.status }}" </p>
+                </td>
+                <td>
+                    <p *ngIf="dadosDoVeiculo"> {{ dadosDoVeiculo.lat }} </p>
+                </td>
+                <td>
+                    <p *ngIf="dadosDoVeiculo"> {{ dadosDoVeiculo.long }} </p>
+                </td>
+            </tr>
+            <tr id="linha_azul_rodape">
+            </tr>
+        </table>
+    </footer>
+</main>
